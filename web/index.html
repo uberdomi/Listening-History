@@ -72,6 +72,7 @@
     <div class="funbar">
       <button type="button" class="fun-btn" id="recap-open">▶ Play your recap</button>
       <button type="button" class="fun-btn ghostish" id="game-open">Play a game</button>
+      <button type="button" class="fun-btn ghostish" id="hitster-open" hidden>🎵 Hitster</button>
       <button type="button" class="fun-btn ghostish" id="vs-open" hidden>⚔️ Versus</button>
       <button type="button" class="fun-btn ghostish" id="rl-open">🎰 Rediscover roulette</button>
       <button type="button" class="fun-btn ghostish" id="cx-open">🎤 Prepare for a concert</button>
@@ -154,6 +155,21 @@
   <div class="game-stage" id="game-stage"></div>
 </dialog>
 
+<dialog id="hitster-dlg" class="hitster-dlg" aria-labelledby="hitster-title">
+  <div class="dlg-head">
+    <div><h2 id="hitster-title">🎵 Hitster</h2><p>Hear the song, then place it on the release timeline.</p></div>
+    <div class="tabs" id="hitster-modes" role="tablist" aria-label="Hitster mode">
+      <button type="button" role="tab" data-hs-mode="solo" aria-selected="true">Solo</button>
+      <button type="button" role="tab" data-hs-mode="duo" aria-selected="false">2 players</button>
+    </div>
+    <label class="hs-goal">Cards to win
+      <input type="number" id="hitster-target" min="2" max="25" step="1" value="10">
+    </label>
+    <button type="button" class="close" id="hitster-close" aria-label="Close">×</button>
+  </div>
+  <div id="hitster-body" class="hitster-body"></div>
+</dialog>
+
 <dialog id="hide-dlg" class="hide-dlg" aria-labelledby="hide-title">
   <div class="dlg-head">
     <div><h2 id="hide-title">Hide or focus on artists</h2>
@@ -205,5 +221,6 @@
 <script src="concerts.js"></script>
 <script src="versus.js"></script>
 <script src="extras.js"></script>
+<script src="hitster.js"></script>
 </body>
 </html>
